@@ -1,0 +1,53 @@
+.slide {
+  /* Left & Right */
+  &-left-enter-active,
+  &-left-leave-active,
+  &-right-enter-active,
+  &-right-leave-active {
+    transition: all $easing-base 0.4s;
+  }
+  &-left-enter,
+  &-right-leave-active {
+    opacity: 0;
+    transform: translate(10px, 0);
+  }
+  &-left-leave-active,
+  &-right-enter {
+    opacity: 0;
+    transform: translate(-10px, 0);
+  }
+
+  /* Top & Bottom */
+  &-top-enter-active,
+  &-top-leave-active,
+  &-bottom-enter-active,
+  &-bottom-leave-active {
+    transition: all $easing-base 0.4s;
+  }
+  &-top-enter,
+  &-bottom-leave-active {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  &-top-leave-active,
+  &-bottom-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.fullslide{
+  &-leave-active,
+  &-enter-active {
+    transition: all $easing-base 0.7s;
+  }
+  &-enter {
+    transform: translate(100%, 0);
+  }
+  &-leave-to {
+    transform: translate(-100%, 0);
+  }
+  &-enter-to {
+    @apply absolute top-0 left-0 right-0;
+  }
+}

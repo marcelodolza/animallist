@@ -1,0 +1,22 @@
+@import 'base';
+
+:root {
+  --swiper-pagination-color: white; 
+}
+
+body{
+  font-family: $font-base;
+  @apply antialiased overflow-x-hidden;
+}
+
+main{
+  @apply flex-grow relative;
+}
+
+.container{
+  @apply max-w-6xl mx-auto;
+}
+
+.overflow-dots{
+  @apply overflow-ellipsis overflow-hidden min-w-full whitespace-nowrap  
+}
